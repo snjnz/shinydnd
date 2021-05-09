@@ -23,4 +23,3 @@ div element with nested elements if vertical is true
 \description{
 dropUI
 }
-

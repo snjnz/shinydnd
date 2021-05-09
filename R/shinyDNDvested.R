@@ -7,5 +7,5 @@
 #' The ShinyDND functions ...
 #'
 #' @docType package
-#' @name shinyDND
+#' @name shinyDNDvested
 NULL

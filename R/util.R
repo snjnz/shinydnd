@@ -13,9 +13,9 @@
 	}, force = TRUE)
 
   # Create link to javascript and css files for package, referenced below
-  shiny::addResourcePath("shinydnd", system.file("www", package = "shinyDND"))
+  shiny::addResourcePath("shinydndvested", system.file("www", package = "shinyDNDvested"))
 }
 
 # htmlDependency js and css will be used in other functions with attachDependency
-shinyDNDDep = htmltools::htmlDependency("shinyDND", packageVersion("shinyDND"), 
+shinyDNDDep = htmltools::htmlDependency("shinyDNDvested", packageVersion("shinyDNDvested"),
 	src = c("href" = "shinydnd"), script = "dragndrop.js", stylesheet = "dragndrop.css")

@@ -22,4 +22,3 @@ to pass a vector of elements instead of using a loop or apply function to genera
 \examples{
 dragSetUI("dragset", list("foo", "bar", "baz"))
 }
-

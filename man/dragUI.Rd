@@ -21,4 +21,3 @@ dragable div element
 \description{
 Create a draggable UI element.
 }
-

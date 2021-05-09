@@ -1,5 +1,5 @@
 library(shiny)
-library(shinyDND)
+library(shinyDNDvested)
 
 # Define UI for application that draws a histogram
 ui <- shinyUI(
