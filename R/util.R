@@ -18,4 +18,4 @@
 
 # htmlDependency js and css will be used in other functions with attachDependency
 shinyDNDDep = htmltools::htmlDependency("shinyDNDvested", packageVersion("shinyDNDvested"),
-	src = c("href" = "shinydnd"), script = "dragndrop.js", stylesheet = "dragndrop.css")
+	src = c("href" = "shinydndvested"), script = "dragndrop.js", stylesheet = "dragndrop.css")
