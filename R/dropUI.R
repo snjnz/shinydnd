@@ -13,17 +13,15 @@ dropUI = function(id, style = NULL, class = "dropelement", row_n = 1, col_n = 1)
   if (row_n > 1 | col_n > 1) {
     row_pct = 100.0/row_n
     col_pct = 100.0/col_n
-    div_element = htmltools::tags$div(style = paste0("height:", row_pct, "%;",
-                                                     "width:", col_pct, "%;",
-                                                     "display:table-cell;"))
-    div_row = list(htmltools::tags$div(rep(list(div_element), col_n),
-                                       style = paste0("height:", row_pct, "%;",
-                                                      "width:", col_pct, "%;",
-                                                      "display:table-row;")))
-    divlist = rep(div_row, row_n)
-    if (is.null(style)) {
-      style = "display:table;"
-    }
+    div_cell = htmltools::tags$div(style="grid-gap:0px;grid-auto-flow: row;min-height: 4em;")
+
+    divlist = rep(list(div_cell), row_n*col_n)
+
+    style = paste0(style,
+                   ";display: grid;",
+                   "grid-template-columns: repeat(", col_n,",", col_pct,"%);",
+                   "grid-template-rows: repeat(", row_n,", auto);",
+                   "height: auto;")
 
     dropUI = htmltools::tags$div(id = id, class = class, style = style, divlist)
     htmltools::attachDependencies(dropUI, shinyDNDDep)
